@@ -23,9 +23,9 @@ class MetalbotSpider(scrapy.Spider):
         Time = now.strftime('%Y-%m-%d %H:%M')
         metalitem = KittoscrapItem()
         metalitem['Time_now'] = Time
-        metalitem['Platinum'] = Platinum
-        metalitem['Palladium'] = Palladium
-        metalitem['Rhodium'] = Rhodium
+        metalitem['Platinum'] = float(Platinum)
+        metalitem['Palladium'] = float(Palladium)
+        metalitem['Rhodium'] = float(Rhodium)
         items.append(metalitem)
         print("Time => ", Time)
         print("Platinum => ", metalitem['Platinum'])
